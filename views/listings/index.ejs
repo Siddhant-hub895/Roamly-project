@@ -1,0 +1,109 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter{
+        margin-left: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+        opacity: 0.6;
+    }
+    .filter p{
+        font-size: 0.7rem;
+    }
+    .filter:hover{
+        text-decoration: underline;
+        opacity: 1;
+        cursor: pointer;
+    }
+</style>
+
+<div class="filters">
+    <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-mountain-city"></i>
+        <p>mountaincity</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-tent"></i>
+        <p>Camp</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-building"></i>
+        <p>Tower</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-person-swimming"></i>
+        <p>Pool</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-cow"></i>
+        <p>Farm</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-brands fa-fort-awesome"></i>
+        <p>Castle</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-snowman"></i>
+        <p>Igloo</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <p>Beach</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-tree"></i>
+        <p>Garden</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-dumbbell"></i>
+        <p>Gym</p>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-spa"></i>
+        <p>Spa</p>
+    </div>
+</div>
+
+<body>
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
+        <% for(let listings of allListings){ %>
+            <a href="/listings/<%= listings._id%>">
+            <div class="card col listing-card">
+              <img src="<%= listings.image.url%>" 
+              class="card-img-top" 
+              alt="listing image" 
+              style="height: 15rem;">
+              <div class="card-img-overlay"></div>
+                <div class="card-body">
+                    <b><%= listings.title%></b>
+                    <p>&#8377; <%= listings.price.toLocaleString("em-IN")%> /night</p>
+                </div>
+            </div>
+            </a>
+        <% } %>
+    </div>
+</body>
