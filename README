@@ -1,0 +1,143 @@
+# Roamly - Hotel & Stay Booking Platform
+Roamly is a full-stack accommodation booking platform that allows users to discover, review, and manage various types of stays, including hotels, villas, apartments, hostels, homestays, farmhouses, camps, treehouses, and more.
+
+## Live Demo
+Live Website: https://roamly-project.onrender.com
+## GitHub Repository
+Repository: https://github.com/Siddhant-hub895/Roamly-project
+
+## Features
+### User Authentication & Authorization
+Secure user registration and login
+Authentication using Passport.js
+Authorization to restrict unauthorized actions
+
+### Property Listings
+Create, edit, and delete listings
+View detailed listing information
+
+### Location Services
+Interactive maps using Mapbox
+Property location visualization
+
+### Reviews & Ratings
+Add reviews and ratings
+Delete own reviews
+Display user-generated feedback
+
+### Cloud Storage
+Image upload and management using Cloudinary
+
+### Security & Validation
+Input validation using Joi
+Custom middleware for route protection
+Centralized error handling
+
+##  Tech Stack
+### Frontend
+HTML5
+CSS3
+Bootstrap
+EJS
+
+### Backend
+Node.js
+Express.js
+
+### Database
+-MongoDB
+
+### Authentication
+Passport.js
+Express Session
+
+### Third-Party Services
+Cloudinary (Image Storage)
+Mapbox (Location & Maps)
+
+## Project Architecture
+The application follows the MVC (Model-View-Controller) Architecture:
+Models → Database schemas and logic
+Views → EJS templates and UI
+Controllers → Business logic and request handling
+Routes → Application endpoints
+Middleware → Authentication, authorization, validation, and error handling
+
+## Screenshots
+### Home Page
+screenshot/home.png
+### Property Details Page
+screenshot/details.png
+### Add New Listing
+screenshot/addNewListing.png
+### Review System
+screenshot/review.png
+### Signup
+screenshot/signup.png
+### login
+screenshot/login.png
+### location
+screenshot/location.png
+
+## Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Siddhant-hub895/roamly-project.git
+```
+### Navigate to Project Directory
+```bash
+cd roamly
+```
+### Install Dependencies
+```bash
+npm install
+```
+### Create Environment Variables
+Create a `.env` file and add:
+```env
+ATLASDB_URL=your_mongodb_connection_string
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_cloudinary_key
+CLOUD_API_SECRET=your_cloudinary_secret
+MAP_TOKEN=your_mapbox_token
+SECRET=your_session_secret
+```
+### Run Application
+```bash
+node app.js
+```
+
+Visit:
+```bash
+http://localhost:8080
+```
+---
+
+##  Key Learnings
+Full-Stack Web Development
+RESTful Routing
+MVC Architecture
+Authentication & Authorization
+Middleware Implementation
+Session Management
+Cloud Storage Integration
+Map API Integration
+Database Design with MongoDB
+Error Handling & Validation
+---
+
+## Future Improvements
+Booking System
+Payment Gateway Integration
+Wishlist Feature
+Advanced Search & Filters
+User Profiles
+Admin Dashboard
+---
+
+## Author
+Siddhant pawar
+LinkedIn: www.linkedin.com/in/siddhant-pawar-004414319
+GitHub: https://github.com/Siddhant-hub895
