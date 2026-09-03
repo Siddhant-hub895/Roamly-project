@@ -24,6 +24,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname,"/public")))
 
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
 
